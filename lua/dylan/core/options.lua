@@ -6,7 +6,8 @@ opt.relativenumber = true
 opt.number = true
 
 -- tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs (prettier default.shiftwidth = 2 -- 2 spaces for indent width
+opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
+opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.autoindent = true -- copy indent from current line when starting a new one
 opt.scrolloff = 10 -- lines above/below the cursor showing when scrolling 
 
