@@ -42,7 +42,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 ---keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
 -- Insert --
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
 
@@ -71,4 +71,3 @@ keymap("x", "K", ":m '<-2<CR>gv=gv", opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-

@@ -6,18 +6,18 @@ end
 local dashboard = require("alpha.themes.dashboard")
 
 dashboard.section.header.val = {
-  "  __  __       _           ____                       _   _     _              ",
+	"  __  __       _           ____                       _   _     _              ",
 	" |  \\/  | __ _| | _____   / ___|  ___  _ __ ___   ___| |_| |__ (_)_ __   __ _  ",
- 	" | |\\/| |/ _` | |/ / _ \\  \\___ \\ / _ \\| '_ ` _ \\ / _ \\ __| '_ \\| | '_ \\ / _` | ",
+	" | |\\/| |/ _` | |/ / _ \\  \\___ \\ / _ \\| '_ ` _ \\ / _ \\ __| '_ \\| | '_ \\ / _` | ",
 	" | |  | | (_| |   <  __/   ___) | (_) | | | | | |  __/ |_| | | | | | | | (_| | ",
 	" |_|  |_|\\__,_|_|\\_\\___|  |____/ \\___/|_| |_| |_|\\___|\\__|_| |_|_|_| |_|\\__, | ",
 	"                                                                        |___/  ",
-  "            ____                  _       __        __          _              ",
-  "           |  _ \\ ___  ___  _ __ | | ___  \\ \\      / /_ _ _ __ | |_            ",
-  "           | |_) / _ \\/ _ \\| '_ \\| |/ _ \\  \\ \\ /\\ / / _` | '_ \\| __|           ",
-  "           |  __/  __/ (_) | |_) | |  __/   \\ V  V / (_| | | | | |_            ",
-  "           |_|   \\___|\\___/| .__/|_|\\___|    \\_/\\_/ \\__,_|_| |_|\\__|           ",
-  "                           |_|                                                 ", 
+	"            ____                  _       __        __          _              ",
+	"           |  _ \\ ___  ___  _ __ | | ___  \\ \\      / /_ _ _ __ | |_            ",
+	"           | |_) / _ \\/ _ \\| '_ \\| |/ _ \\  \\ \\ /\\ / / _` | '_ \\| __|           ",
+	"           |  __/  __/ (_) | |_) | |  __/   \\ V  V / (_| | | | | |_            ",
+	"           |_|   \\___|\\___/| .__/|_|\\___|    \\_/\\_/ \\__,_|_| |_|\\__|           ",
+	"                           |_|                                                 ",
 }
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
@@ -30,12 +30,12 @@ dashboard.section.buttons.val = {
 }
 
 local function footer()
--- NOTE: requires the fortune-mod package to work
+	-- NOTE: requires the fortune-mod package to work
 	-- local handle = io.popen("fortune")
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-  return ""
+	return ""
 end
 
 dashboard.section.footer.val = footer()
