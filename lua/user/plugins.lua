@@ -82,6 +82,7 @@ return packer.startup(function(use)
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", tag = "0.1.6" })
+	use({ "nvim-telescope/telescope-media-files.nvim"})
 
 	-- Treesitter
 	use({
