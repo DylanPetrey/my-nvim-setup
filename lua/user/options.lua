@@ -28,7 +28,6 @@ local options = {
   number = true,                           -- set numbered lines
   relativenumber = true,                   -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
-  
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
   wrap = false,                            -- display lines as one long line
   linebreak = true,                        -- companion to wrap, don't split words
@@ -42,8 +41,12 @@ local options = {
 
 for k, v in pairs(options) do
   vim.opt[k] = v
-end
+end	
 
+-- Use tabs over spaces
+vim.cmd([[ set noexpandtab ]])
+
+vim.bo.softtabstop = 2
 -- vim.opt.shortmess = "ilmnrx"                        -- flags to shorten vim messages, see :help 'shortmess'
 vim.opt.shortmess:append("c")                          -- don't give |ins-completion-menu| messages
 vim.opt.iskeyword:append("-")                          -- hyphenated words recognized by searches
