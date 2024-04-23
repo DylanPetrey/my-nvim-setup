@@ -33,15 +33,19 @@ local options = {
   linebreak = true,                        -- companion to wrap, don't split words
   scrolloff = 8,                           -- minimal number of screen lines to keep above and below the cursor
   sidescrolloff = 8,                       -- minimal number of screen columns either side of cursor if wrap is `false`
-  guifont = "monospace:h17",               -- the font used in graphical neovim applications
   whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next lines
 
-  backspace =  "indent,eol,start"          -- allow backspace on indent, end of line or insert mode start position
+	guifont = "Hack Nerd Font Mono:16",			 -- the font used in graphical neovim applications
+
+  backspace =  "indent,eol,start",          -- allow backspace on indent, end of line or insert mode start position
+
+  spelllang = 'en_us',
+  spell = true,
 }
 
 for k, v in pairs(options) do
   vim.opt[k] = v
-end	
+end
 
 -- Use tabs over spaces
 vim.cmd([[ set noexpandtab ]])
