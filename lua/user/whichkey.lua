@@ -84,7 +84,7 @@ local mappings = {
 		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 		"Buffers",
 	},
-	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+	["e"] = { "<cmd>Neotree toggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
 	["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -95,15 +95,7 @@ local mappings = {
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-
-	p = {
-		name = "Packer",
-		c = { "<cmd>PackerCompile<cr>", "Compile" },
-		i = { "<cmd>PackerInstall<cr>", "Install" },
-		s = { "<cmd>PackerSync<cr>", "Sync" },
-		S = { "<cmd>PackerStatus<cr>", "Status" },
-		u = { "<cmd>PackerUpdate<cr>", "Update" },
-	},
+	["p"] = { "<cmd>Lazy<cr>", "Lazy" },
 
 	g = {
 		name = "Git",
@@ -126,6 +118,10 @@ local mappings = {
 			"<cmd>Gitsigns diffthis HEAD<cr>",
 			"Diff",
 		},
+	},
+
+	v = {
+		name = 'Window'
 	},
 
 	l = {
@@ -175,7 +171,6 @@ local mappings = {
 		name = "Terminal",
 		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
 		u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-		g = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Git" },
 		t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
 		p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
 		f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
