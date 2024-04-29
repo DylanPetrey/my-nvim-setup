@@ -33,11 +33,11 @@ local mode = {
 	end,
 }
 
-local filetype = {
-	"filetype",
-	icons_enabled = false,
-	icon = nil,
-}
+--local filetype = {
+--	"filetype",
+--	icons_enabled = false,
+--	icon = nil,
+--}
 
 local branch = {
 	"branch",
@@ -69,9 +69,9 @@ local lsp = {
 	end,
 }
 
-local spaces = function()
-	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
-end
+--local spaces = function()
+--	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
+--end
 
 lualine.setup({
 	options = {
