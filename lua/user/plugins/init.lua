@@ -20,9 +20,7 @@ require("lazy").setup({
 	"JoosepAlviste/nvim-ts-context-commentstring",
 	"kyazdani42/nvim-web-devicons",
 	"moll/vim-bbye",
-	"nvim-lualine/lualine.nvim",
 	"akinsho/toggleterm.nvim",
-	"ahmedkhalf/project.nvim",
 	"lewis6991/impatient.nvim",
 	{ "lukas-reineke/indent-blankline.nvim", version = "2.20.8" },
 	"folke/which-key.nvim",
@@ -31,6 +29,10 @@ require("lazy").setup({
 	require("user.plugins.bufferline"),
 	require("user.plugins.cmp"),
 	require("user.plugins.neo-tree"),
+	require("user.plugins.gitsigns"),
+	require("user.plugins.lualine"),
+	require("user.plugins.project"),
+	require("user.plugins.telescope"),
 
 	-- Colorschemes
 	"folke/tokyonight.nvim",
@@ -47,16 +49,9 @@ require("lazy").setup({
 	"jose-elias-alvarez/null-ls.nvim", -- for formatters and linters
 	"RRethy/vim-illuminate",
 
-	-- Telescope
-	{ "nvim-telescope/telescope.nvim", version = "0.1.6" },
-	"nvim-telescope/telescope-media-files.nvim",
-
 	-- Treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 	},
-
-	-- Git
-	"lewis6991/gitsigns.nvim",
 })
