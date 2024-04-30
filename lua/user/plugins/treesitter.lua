@@ -3,7 +3,6 @@ return {
 	dependencies = { "nvim-treesitter/nvim-treesitter-context" },
 	config = function()
 		local configs = require("nvim-treesitter.configs")
-		---@diagnostic disable-next-line: missing-fields
 		configs.setup({
 			ensure_installed = "all", -- one of "all" or a list of languages
 			ignore_install = { "phpdoc" }, -- List of parsers to ignore installingtree
@@ -11,9 +10,6 @@ return {
 				enable = true, -- false will disable the whole extension
 			},
 			autopairs = {
-				enable = true,
-			},
-			context_commentstring = {
 				enable = true,
 			},
 			autotag = {
