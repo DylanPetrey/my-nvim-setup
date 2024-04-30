@@ -15,24 +15,25 @@ vim.opt.rtp:prepend(lazypath)
 -- Install your plugins here
 require("lazy").setup({
 	"nvim-lua/plenary.nvim", -- Useful lua functions used by lots of plugins
-	"windwp/nvim-autopairs", -- Autopairs, integrates with both cmp and treesitter
-	"numToStr/Comment.nvim",
 	"JoosepAlviste/nvim-ts-context-commentstring",
 	"kyazdani42/nvim-web-devicons",
 	"moll/vim-bbye",
-	"akinsho/toggleterm.nvim",
 	"lewis6991/impatient.nvim",
-	{ "lukas-reineke/indent-blankline.nvim", version = "2.20.8" },
+	"lukas-reineke/indent-blankline.nvim",
 	"folke/which-key.nvim",
 
+	require("user.plugins.autopairs"),
 	require("user.plugins.alpha"),
 	require("user.plugins.bufferline"),
 	require("user.plugins.cmp"),
+	require("user.plugins.comment"),
 	require("user.plugins.neo-tree"),
 	require("user.plugins.gitsigns"),
 	require("user.plugins.lualine"),
 	require("user.plugins.project"),
 	require("user.plugins.telescope"),
+	require("user.plugins.toggleterm"),
+	require("user.plugins.treesitter"),
 
 	-- Colorschemes
 	"folke/tokyonight.nvim",
@@ -48,10 +49,4 @@ require("lazy").setup({
 	"williamboman/mason-lspconfig.nvim",
 	"jose-elias-alvarez/null-ls.nvim", -- for formatters and linters
 	"RRethy/vim-illuminate",
-
-	-- Treesitter
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-	},
 })
