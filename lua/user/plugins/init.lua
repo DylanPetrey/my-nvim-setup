@@ -21,6 +21,7 @@ require("lazy").setup({
 	"lewis6991/impatient.nvim",
 	"lukas-reineke/indent-blankline.nvim",
 	"folke/which-key.nvim",
+	"christoomey/vim-tmux-navigator",
 
 	require("user.plugins.autopairs"),
 	require("user.plugins.alpha"),
