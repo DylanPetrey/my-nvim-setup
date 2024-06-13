@@ -33,7 +33,6 @@ require("lazy").setup({
 	require("user.plugins.lualine"),
 	require("user.plugins.project"),
 	require("user.plugins.telescope"),
-	require("user.plugins.toggleterm"),
 	require("user.plugins.treesitter"),
 	require("user.plugins.neogit"),
 

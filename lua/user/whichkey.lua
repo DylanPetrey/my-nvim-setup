@@ -80,13 +80,8 @@ local opts = {
 
 local mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-	["b"] = {
-		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-		"Buffers",
-	},
 	["e"] = { "<cmd>Neotree toggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
-	["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = {
@@ -97,33 +92,32 @@ local mappings = {
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 	["p"] = { "<cmd>Lazy<cr>", "Lazy" },
 
-	g = {
-		name = "Git",
-		g = { "<cmd>Neogit<CR>", "Neogit" },
-		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
-		k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
-		l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
-		p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
-		r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
-		R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-		s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-		u = {
-			"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
-			"Undo Stage Hunk",
-		},
-		o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
-		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-		c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-		C = { "<cmd>Neogit commit<cr>", "New commit" },
-		d = {
-			"<cmd>Gitsigns diffthis HEAD<cr>",
-			"Diff",
-		},
-	},
+	["g"] = { "<cmd>Neogit<CR>", "Neogit" },
 
-	v = {
-		name = 'Window'
-	},
+
+	-- g = {
+	-- 	name = "Git",
+	-- 	g = { "<cmd>Neogit<CR>", "Neogit" },
+	-- 	j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
+	-- 	k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
+	-- 	l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
+	-- 	p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
+	-- 	r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
+	-- 	R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
+	-- 	s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+	-- 	u = {
+	-- 		"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
+	-- 		"Undo Stage Hunk",
+	-- 	},
+	-- 	o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
+	-- 	b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+	-- 	c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+	-- 	C = { "<cmd>Neogit commit<cr>", "New commit" },
+	-- 	d = {
+	-- 		"<cmd>Gitsigns diffthis HEAD<cr>",
+	-- 		"Diff",
+	-- 	},
+	-- },
 
 	l = {
 		name = "LSP",
@@ -168,16 +162,13 @@ local mappings = {
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
 	},
 
-	t = {
-		name = "Terminal",
-		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-		u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-		t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
-		p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
-		f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
-		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
-		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+	b = {
+		name = "Buffer",
+		t = {
+			"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+			"Telescope",
+		},
+		c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	},
 }
 
