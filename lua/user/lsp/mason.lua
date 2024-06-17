@@ -7,7 +7,6 @@ local servers = {
 	"eslint",
   "prismals",
 	"clangd",
-	"gopls"
 }
 
 local settings = {
