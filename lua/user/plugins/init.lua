@@ -36,6 +36,10 @@ require("lazy").setup({
 	require("user.plugins.treesitter"),
 	require("user.plugins.neogit"),
 
+	-- ai
+	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
+	"zbirenbaum/copilot-cmp",
+
 	-- Colorschemes
 	"folke/tokyonight.nvim",
 	"lunarvim/darkplus.nvim",
