@@ -37,6 +37,7 @@ require("lazy").setup({
 	require("user.plugins.neogit"),
 	require("user.plugins.harpoon"),
 
+
 	-- ai
 	{ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
 	"zbirenbaum/copilot-cmp",
@@ -55,4 +56,8 @@ require("lazy").setup({
 	"williamboman/mason-lspconfig.nvim",
 	"jose-elias-alvarez/null-ls.nvim", -- for formatters and linters
 	"RRethy/vim-illuminate",
+
+	-- lsp formatting 
+	"stevearc/conform.nvim",
+	"zapling/mason-conform.nvim",
 })
