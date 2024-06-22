@@ -12,8 +12,12 @@ return {
 		end, { desc = "Menu" })
 
 		vim.keymap.set("n", "<leader>ha", function()
-			harpoon:list():Add()
+			harpoon:list():add()
 		end, { desc = "Add File" })
+
+		vim.keymap.set("n", "<leader>hx", function()
+			harpoon:list():remove()
+		end, { desc = "Remove File" })
 
 		-- Toggle previous & next buffers stored within Harpoon list
 		vim.keymap.set("n", "<leader>hh", function()

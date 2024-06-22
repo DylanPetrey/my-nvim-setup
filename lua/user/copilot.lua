@@ -25,6 +25,3 @@ end, {})
 
 local opts = { noremap = true, silent = true }
 keymap("i", "<c-c>", "<cmd>CopilotMagic<cr>", opts)
-
-
-
