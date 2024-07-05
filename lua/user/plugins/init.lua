@@ -23,11 +23,13 @@ require("lazy").setup({
 	"folke/which-key.nvim",
 	"christoomey/vim-tmux-navigator",
 
+	-- plugin files
 	require("user.plugins.autopairs"),
 	require("user.plugins.alpha"),
 	require("user.plugins.bufferline"),
 	require("user.plugins.cmp"),
 	require("user.plugins.comment"),
+	require("user.plugins.todo-comments"),
 	require("user.plugins.neo-tree"),
 	require("user.plugins.gitsigns"),
 	require("user.plugins.lualine"),
@@ -36,7 +38,10 @@ require("lazy").setup({
 	require("user.plugins.treesitter"),
 	require("user.plugins.neogit"),
 	require("user.plugins.harpoon"),
-	require("user.plugins.close-tags"),
+	require("user.plugins.fidget"),
+	require("user.plugins.jumptag"),
+
+	-- lsp plugins
 	require("user.lsp.saga"),
 
 	-- ai
