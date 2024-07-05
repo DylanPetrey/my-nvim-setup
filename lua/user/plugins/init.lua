@@ -36,6 +36,7 @@ require("lazy").setup({
 	require("user.plugins.treesitter"),
 	require("user.plugins.neogit"),
 	require("user.plugins.harpoon"),
+	require("user.plugins.close-tags"),
 	require("user.lsp.saga"),
 
 	-- ai
@@ -45,6 +46,7 @@ require("lazy").setup({
 	-- Colorschemes
 	"folke/tokyonight.nvim",
 	"lunarvim/darkplus.nvim",
+	"rebelot/kanagawa.nvim",
 
 	-- Snippets
 	"L3MON4D3/LuaSnip", --snippet engine

@@ -5,8 +5,10 @@ local servers = {
 	"pyright",
 	"jsonls",
 	"eslint",
-  "prismals",
+	"prismals",
 	"clangd",
+	"cssls",
+	"tailwindcss",
 }
 
 local settings = {
