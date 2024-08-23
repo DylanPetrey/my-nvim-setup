@@ -4,18 +4,14 @@ return {
 		local dashboard = require("alpha.themes.dashboard")
 
 		dashboard.section.header.val = {
-			"  __  __       _           ____                       _   _     _              ",
-			" |  \\/  | __ _| | _____   / ___|  ___  _ __ ___   ___| |_| |__ (_)_ __   __ _  ",
-			" | |\\/| |/ _` | |/ / _ \\  \\___ \\ / _ \\| '_ ` _ \\ / _ \\ __| '_ \\| | '_ \\ / _` | ",
-			" | |  | | (_| |   <  __/   ___) | (_) | | | | | |  __/ |_| | | | | | | | (_| | ",
-			" |_|  |_|\\__,_|_|\\_\\___|  |____/ \\___/|_| |_| |_|\\___|\\__|_| |_|_|_| |_|\\__, | ",
-			"                                                                        |___/  ",
-			"            ____                  _       __        __          _              ",
-			"           |  _ \\ ___  ___  _ __ | | ___  \\ \\      / /_ _ _ __ | |_            ",
-			"           | |_) / _ \\/ _ \\| '_ \\| |/ _ \\  \\ \\ /\\ / / _` | '_ \\| __|           ",
-			"           |  __/  __/ (_) | |_) | |  __/   \\ V  V / (_| | | | | |_            ",
-			"           |_|   \\___|\\___/| .__/|_|\\___|    \\_/\\_/ \\__,_|_| |_|\\__|           ",
-			"                           |_|                                                 ",
+			"  _____           _",
+			" / ____|         | |",
+			"| (___  _   _ ___| |_ ___ _ __ _____      ____ _ _ __ ___",
+			" \\___ \\| | | / __| __/ _ \\ '_ ` _ \\ \\ /\\ / / _` | '__/ _ \\",
+			" ____) | |_| \\__ \\ ||  __/ | | | | \\ V  V / (_| | | |  __/",
+			"|_____/ \\__, |___/\\__\\___|_| |_| |_|\\_/\\_/ \\__,_|_|  \\___|",
+			"        __/ |",
+			"       |___/",
 		}
 		dashboard.section.buttons.val = {
 			dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
@@ -24,7 +20,6 @@ return {
 			dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
 			dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
 			dashboard.button("t", "󱎸  Find text", ":Telescope live_grep <CR>"),
-			dashboard.button("c", "  Configuration", ":e $MYVIMRC <CR>"),
 			dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 		}
 
