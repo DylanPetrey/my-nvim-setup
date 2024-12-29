@@ -1,4 +1,4 @@
-local do_autoformat = true
+local do_autoformat = false
 
 -- Create autoformat toggle
 vim.api.nvim_create_user_command("AutoformatToggle", function()
@@ -15,7 +15,7 @@ require("conform").setup({
 		lua = { "stylua" },
 		-- Conform will run multiple formatters sequentially
 		-- python = { "isort", "black" },
-		--go = { "goimports", "gofmt" },
+		go = { "goimports", "gofmt" },
 		-- Use a sub-list to run only the first available formatter
 		javascript = { { "prettierd" } },
 		--javascriptreact = { { "prettierd" } },

@@ -57,11 +57,6 @@ return {
 					luasnip.lsp_expand(args.body) -- For `luasnip` users.
 				end,
 			},
-			formatters = {
-				insert_text = require("copilot_cmp.format").remove_existing,
-				label = require("copilot_cmp.format").format_label_text,
-				preview = require("copilot_cmp.format").deindent,
-			},
 			mapping = {
 				["<C-k>"] = cmp.mapping.select_prev_item(),
 				["<C-j>"] = cmp.mapping.select_next_item(),

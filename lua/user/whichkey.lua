@@ -109,12 +109,6 @@ local mappings = {
 		},
 		c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	},
-
-	c = {
-		name = "Copilot",
-		d = { "<cmd>Copilot disable<cr>", "Disable" },
-		e = { "<cmd>Copilot enable<cr>", "Enable" },
-	}
 }
 
 which_key.setup(setup)

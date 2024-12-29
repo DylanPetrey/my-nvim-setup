@@ -1,7 +1,7 @@
 local servers = {
 	"lua_ls",
 	"html",
-	"tsserver",
+	"ts_ls",
 	"pyright",
 	"jsonls",
 	"eslint",
@@ -9,6 +9,7 @@ local servers = {
 	"clangd",
 	"cssls",
 	"tailwindcss",
+	"gopls"
 }
 
 local settings = {
