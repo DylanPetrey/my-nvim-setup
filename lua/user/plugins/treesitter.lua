@@ -5,19 +5,19 @@ return {
 		local configs = require("nvim-treesitter.configs")
 		configs.setup({
 			ensure_installed = "all", -- one of "all" or a list of languages
-			ignore_install = { "phpdoc" }, -- List of parsers to ignore installingtree
+			ignore_install = { "phpdoc", "wing", "ipkg" }, -- List of parsers to ignore installingtree
 			highlight = {
 				enable = true, -- false will disable the whole extension
 			},
 			autopairs = {
 				enable = true,
 			},
-			autotag = {
-				enable = true,
-				enable_rename = true,
-				enable_close = true,
-				enable_close_on_slash = false,
-			},
+			-- autotag = {
+			-- 	enable = true,
+			-- 	enable_rename = true,
+			-- 	enable_close = true,
+			-- 	enable_close_on_slash = false,
+			-- },
 			indent = { enable = true, disable = { "python" } },
 			-- incremental_selection = {
 			-- 	enable = true,

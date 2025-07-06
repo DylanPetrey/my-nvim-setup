@@ -27,7 +27,7 @@ require("lazy").setup({
 	-- plugin files
 	require("user.plugins.autopairs"),
 	require("user.plugins.alpha"),
-	require("user.plugins.bufferline"),
+	-- require("user.plugins.bufferline"),
 	require("user.plugins.cmp"),
 	require("user.plugins.comment"),
 	require("user.plugins.todo-comments"),
@@ -51,14 +51,14 @@ require("lazy").setup({
 	"rebelot/kanagawa.nvim",
 
 	-- Snippets
-	"L3MON4D3/LuaSnip", --snippet engine
+	-- "L3MON4D3/LuaSnip", --snippet engine
 	"rafamadriz/friendly-snippets", -- a bunch of snippets to use
 
 	-- LSP
 	"neovim/nvim-lspconfig", -- enable LSP
 	"williamboman/mason.nvim", -- simple to use language server installer
 	"williamboman/mason-lspconfig.nvim",
-	"jose-elias-alvarez/null-ls.nvim", -- for formatters and linters
+	-- "jose-elias-alvarez/null-ls.nvim", -- for formatters and linters
 	"RRethy/vim-illuminate",
 
 	-- lsp formatting

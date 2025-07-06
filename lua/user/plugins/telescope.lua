@@ -2,6 +2,7 @@ return {
 	"nvim-telescope/telescope.nvim",
 	dependencies = {
 		"nvim-telescope/telescope-media-files.nvim",
+		"ThePrimeagen/harpoon",
 	},
 	config = function()
 		local status_ok, telescope = pcall(require, "telescope")
@@ -10,6 +11,7 @@ return {
 		end
 
 		telescope.load_extension("media_files")
+		telescope.load_extension("harpoon")
 
 		local actions = require("telescope.actions")
 
@@ -111,5 +113,7 @@ return {
 				},
 			},
 		})
+
+		-- require("telescope").load_extension("harpoon")
 	end,
 }

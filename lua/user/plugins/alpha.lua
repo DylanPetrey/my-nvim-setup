@@ -1,9 +1,29 @@
-return {
-	"goolord/alpha-nvim",
-	config = function()
-		local dashboard = require("alpha.themes.dashboard")
+local personal = {
+	{
+		" _____        _               _____     _                  ",
+		"|  __ \\      | |             |  __ \\   | |                 ",
+		"| |  | |_   _| | __ _ _ __   | |__) |__| |_ _ __ ___ _   _ ",
+		"| |  | | | | | |/ _` | '_ \\  |  ___/ _ \\ __| '__/ _ \\ | | |",
+		"| |__| | |_| | | (_| | | | | | |  |  __/ |_| | |  __/ |_| |",
+		"|_____/ \\__, |_|\\__,_|_| |_| |_|   \\___|\\__|_|  \\___|\\__, |",
+		"         __/ |                                        __/ |",
+		"        |___/                                        |___/ ",
+	},
+	{
+		" ______  _     _ _____        ______       _______  _____  _______ _______ _______ _     _ _____ __   _  ______",
+		" |_____] |     |   |   |      |     \\      |______ |     | |  |  | |______    |    |_____|   |   | \\  | |  ____",
+		" |_____] |_____| __|__ |_____ |_____/      ______| |_____| |  |  | |______    |    |     | __|__ |  \\_| |_____|",
+		"                                                                                                               ",
+		"            _____  _______  _____   _____         _______      _  _  _ _______ __   _ _______                  ",
+		"           |_____] |______ |     | |_____] |      |______      |  |  | |_____| | \\  |    |                     ",
+		"           |       |______ |_____| |       |_____ |______      |__|__| |     | |  \\_|    |                     ",
+		"                                                                                                               ",
+	},
+}
 
-		dashboard.section.header.val = {
+
+local work = {
+	{
 			"  _____           _",
 			" / ____|         | |",
 			"| (___  _   _ ___| |_ ___ _ __ _____      ____ _ _ __ ___",
@@ -12,14 +32,25 @@ return {
 			"|_____/ \\__, |___/\\__\\___|_| |_| |_|\\_/\\_/ \\__,_|_|  \\___|",
 			"        __/ |",
 			"       |___/",
-		}
+	}
+}
+
+
+return {
+	"goolord/alpha-nvim",
+	config = function()
+		local dashboard = require("alpha.themes.dashboard")
+
+		local isWork = false
+		local options = personal
+		if isWork == true then options = work end
+
+		-- pick random option
+		math.randomseed(os.time())
+		dashboard.section.header.val = options[math.random(#options)]
+
 		dashboard.section.buttons.val = {
-			dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
-			dashboard.button("a", "  New file", ":ene <BAR> <CR>"),
-			dashboard.button("e", "  Open Explorer", ":Neotree toggle <CR>"),
-			dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
-			dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
-			dashboard.button("t", "󱎸  Find text", ":Telescope live_grep <CR>"),
+			dashboard.button("c", "  Configuration", ":e $MYVIMRC <CR>"),
 			dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 		}
 

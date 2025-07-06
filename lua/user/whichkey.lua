@@ -18,18 +18,22 @@ local opts = {
 }
 
 local mappings = {
-	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
+	["x"] = { "<cmd>bw<CR>", "Close Buffer" },
+	["z"] = { "<cmd>set hlsearch!<CR>", "No Highlight" },
+	["p"] = { "<cmd>b#<cr>", "Previous Buffer" },
+
+
+	-- ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
 	["e"] = { "<cmd>Neotree toggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
-	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+	["n"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = {
 		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 		"Find files",
 	},
-	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+	["t"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-	["p"] = { "<cmd>Lazy<cr>", "Lazy" },
 
 	["g"] = { "<cmd>Neogit<CR>", "Neogit" },
 
@@ -108,6 +112,15 @@ local mappings = {
 			"Telescope",
 		},
 		c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+	},
+
+	k = {
+		name = "Kwik files!!!",
+		e = { "<cmd>e .env<cr>", "Open env file" },
+		i = { "<cmd>e .gitignore<cr>", "Open gitignore" },
+		p = { "<cmd>e package.json<cr>", "Open package.json" },
+		r = { "<cmd>e README.md<cr>", "Open README.md" },
+		d = { "<cmd>e .dockerignore<cr>", "Open dockerignore" },
 	},
 }
 
