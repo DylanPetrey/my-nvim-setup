@@ -26,13 +26,13 @@ local mappings = {
 	-- ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
 	["e"] = { "<cmd>Neotree toggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
-	["q"] = { "<cmd>q!<CR>", "Quit" },
+	-- ["q"] = { "<cmd>q!<CR>", "Quit" },
 	["n"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = {
 		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 		"Find files",
 	},
-	["t"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+	-- ["t"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
 	["g"] = { "<cmd>Neogit<CR>", "Neogit" },
@@ -98,6 +98,7 @@ local mappings = {
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 		c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
 		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
+		g = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
 		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
 		R = { "<cmd>Telescope registers<cr>", "Registers" },
