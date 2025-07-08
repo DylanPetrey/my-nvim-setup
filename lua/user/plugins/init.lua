@@ -49,6 +49,9 @@ require("lazy").setup({
 	"folke/tokyonight.nvim",
 	"lunarvim/darkplus.nvim",
 	"rebelot/kanagawa.nvim",
+	"catppuccin/nvim",
+	require("user.theme.onedark"),
+
 
 	-- Snippets
 	-- "L3MON4D3/LuaSnip", --snippet engine
