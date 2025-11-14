@@ -41,6 +41,7 @@ require("lazy").setup({
 	require("user.plugins.harpoon"),
 	require("user.plugins.fidget"),
 	require("user.plugins.jumptag"),
+	require("user.plugins.snacks"),
 
 	-- lsp plugins
 	require("user.lsp.saga"),
