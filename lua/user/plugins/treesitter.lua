@@ -1,8 +1,11 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	dependencies = { "nvim-treesitter/nvim-treesitter-context" },
+	dependencies = { 
+		"nvim-treesitter/nvim-treesitter-context",
+	},
 	config = function()
 		local configs = require("nvim-treesitter.configs")
+
 		configs.setup({
 			ensure_installed = "all", -- one of "all" or a list of languages
 			ignore_install = { "phpdoc", "wing", "ipkg" }, -- List of parsers to ignore installingtree

@@ -11,7 +11,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
-
 -- Install your plugins here
 require("lazy").setup({
 	"nvim-lua/plenary.nvim", -- Useful lua functions used by lots of plugins
@@ -23,6 +22,11 @@ require("lazy").setup({
 	"folke/which-key.nvim",
 	"christoomey/vim-tmux-navigator",
 	"sitiom/nvim-numbertoggle",
+
+	{
+		"windwp/nvim-ts-autotag",
+		opts = {},
+	},
 
 	-- plugin files
 	require("user.plugins.autopairs"),
