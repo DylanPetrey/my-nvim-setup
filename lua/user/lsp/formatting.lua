@@ -17,9 +17,9 @@ require("conform").setup({
 		-- python = { "isort", "black" },
 		go = { "goimports", "gofmt" },
 		-- Use a sub-list to run only the first available formatter
-		javascript = { { "prettierd" } },
+		javascript = { "prettierd" },
 		--javascriptreact = { { "prettierd" } },
-		typescript = { { "prettierd" } },
+		typescript = { "prettierd" },
 		--typescriptreact = { { "prettierd" } },
 		--astro = { { "prettierd" } },
 		--java = { "google-java-format" },
