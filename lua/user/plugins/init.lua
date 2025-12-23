@@ -21,7 +21,6 @@ require("lazy").setup({
 	"lukas-reineke/indent-blankline.nvim",
 	"folke/which-key.nvim",
 	"christoomey/vim-tmux-navigator",
-	"sitiom/nvim-numbertoggle",
 
 	{
 		"windwp/nvim-ts-autotag",
