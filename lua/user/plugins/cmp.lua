@@ -10,10 +10,16 @@ return {
 			"L3MON4D3/LuaSnip",
 			version = "v2.*",
 		},
+
+		-- CSS colors
+		'brenoprata10/nvim-highlight-colors',
 	},
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
+		local highlight = require('nvim-highlight-colors')
+
+		highlight.setup({})
 
 		require("luasnip.loaders.from_vscode").lazy_load({ paths = { vim.fn.stdpath("config") .. "/snippets" } })
 
@@ -102,17 +108,18 @@ return {
 			},
 			formatting = {
 				fields = { "kind", "abbr", "menu" },
-				format = function(entry, vim_item)
+				format = function(entry, item)
 					-- Kind icons
-					vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+					item.kind = string.format("%s", kind_icons[item.kind])
 					-- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-					vim_item.menu = ({
+					item.menu = ({
 						nvim_lsp = "[LSP]",
 						luasnip = "[Snippet]",
 						buffer = "[Buffer]",
 						path = "[Path]",
 					})[entry.source.name]
-					return vim_item
+
+					return highlight.format(entry, item)
 				end,
 			},
 			sources = {
